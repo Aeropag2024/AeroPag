@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Proprietários e Aeronaves</title>
+    <link rel="stylesheet" href="CPA.css">
+    <script>
+        function addEntry(event) {
+            event.preventDefault(); 
+
+            
+            const ownerName = document.getElementById('ownerName').value;
+            const ownerContact = document.getElementById('ownerContact').value;
+            const aircraftModel = document.getElementById('aircraftModel').value;
+            const aircraftRegistration = document.getElementById('aircraftRegistration').value;
+            const aircraftType = document.getElementById('aircraftType').value;
+            const aircraftCapacity = document.getElementById('aircraftCapacity').value;
+
+            
+            const table = document.getElementById('entriesTable').getElementsByTagName('tbody')[0];
+            const newRow = table.insertRow();
+            newRow.insertCell().textContent = ownerName;
+            newRow.insertCell().textContent = ownerContact;
+            newRow.insertCell().textContent = aircraftModel;
+            newRow.insertCell().textContent = aircraftRegistration;
+            newRow.insertCell().textContent = aircraftType;
+            newRow.insertCell().textContent = aircraftCapacity;
+
+        
+            document.getElementById('entryForm').reset();
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Proprietários e Aeronaves</h1>
+    </header>
+    <main>
+        <section class="form-section">
+            <h2>Cadastrar Novo Proprietário e Aeronave</h2>
+            <form id="entryForm" onsubmit="addEntry(event)">
+                <fieldset>
+                    <legend>Dados do Proprietário</legend>
+                    <div class="form-group">
+                        <label for="ownerName">Nome do Proprietário:</label>
+                        <input type="text" id="ownerName" name="ownerName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ownerContact">Contato do Proprietário:</label>
+                        <input type="text" id="ownerContact" name="ownerContact" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Dados da Aeronave</legend>
+                    <div class="form-group">
+                        <label for="aircraftModel">Modelo da Aeronave:</label>
+                        <input type="text" id="aircraftModel" name="aircraftModel" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="aircraftRegistration">Registro da Aeronave:</label>
+                        <input type="text" id="aircraftRegistration" name="aircraftRegistration" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="aircraftType">Tipo de Aeronave:</label>
+                        <input type="text" id="aircraftType" name="aircraftType" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="aircraftCapacity">Capacidade da Aeronave:</label>
+                        <input type="number" id="aircraftCapacity" name="aircraftCapacity" required>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </form>
+        </section>
+
+        <section class="entries-section">
+            <h2>Dados Cadastrados</h2>
+            <table id="entriesTable">
+                <thead>
+                    <tr>
+                        <th>Nome do Proprietário</th>
+                        <th>Contato do Proprietário</th>
+                        <th>Modelo da Aeronave</th>
+                        <th>Registro da Aeronave</th>
+                        <th>Tipo de Aeronave</th>
+                        <th>Capacidade da Aeronave</th>
+                    </tr>
+                </thead>
+                
+            </table>
+        </section>
+    </main>
+</body>
+</html>

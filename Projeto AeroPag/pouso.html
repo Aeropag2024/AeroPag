@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços de Pouso</title>
+    <link rel="stylesheet" href="paginaSP.css">
+</head>
+
+    
+<body>
+    <script>
+        function addRecord(event) {
+            event.preventDefault(); 
+            const flightNumber = document.getElementById('flightNumber').value;
+            const landingTime = document.getElementById('landingTime').value;
+            const runwayStatus = document.getElementById('runwayStatus').value;
+            const aircraft = document.getElementById('aircraft').value;
+            const origin = document.getElementById('origin').value;
+            const destination = document.getElementById('destination').value;
+            const occupancyTime = document.getElementById('occupancyTime').value;
+
+        
+            const table = document.getElementById('recordsTable').getElementsByTagName('tbody')[0];
+            const newRow = table.insertRow();
+            newRow.insertCell().textContent = flightNumber;
+            newRow.insertCell().textContent = landingTime;
+            newRow.insertCell().textContent = runwayStatus;
+            newRow.insertCell().textContent = aircraft;
+            newRow.insertCell().textContent = origin;
+            newRow.insertCell().textContent = destination;
+            newRow.insertCell().textContent = occupancyTime;
+
+            
+            document.getElementById('form').reset();
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Registro de Serviços de Pouso</h1>
+    </header>
+    <main>
+        <section class="form-section">
+            <h2>Registrar Novo Pouso</h2>
+            <form id="form" onsubmit="addRecord(event)">
+                <div class="form-group">
+                    <label for="flightNumber">Número do Voo:</label>
+                    <input type="text" id="flightNumber" name="flightNumber" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="landingTime">Hora do Pouso:</label>
+                    <input type="time" id="landingTime" name="landingTime" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="runwayStatus">Disponibilidade da Pista:</label>
+                    <select id="runwayStatus" name="runwayStatus">
+                        <option value="Disponível">Disponível</option>
+                        <option value="Ocupada">Ocupada</option>
+                        <option value="Em Manutenção">Em Manutenção</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="aircraft">Avião:</label>
+                    <input type="text" id="aircraft" name="aircraft" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="origin">Origem:</label>
+                    <input type="text" id="origin" name="origin" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="destination">Destino:</label>
+                    <input type="text" id="destination" name="destination" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="occupancyTime">Tempo de Ocupação (minutos):</label>
+                    <input type="number" id="occupancyTime" name="occupancyTime" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Registrar</button>
+            </form>
+        </section>
+
+        <section class="records">
+            <h2>Registros de Pouso</h2>
+            <table id="recordsTable">
+                <thead>
+                    <tr>
+                        <th>Número do Voo</th>
+                        <th>Hora do Pouso</th>
+                        <th>Pista</th>
+                        <th>Avião</th>
+                        <th>Origem</th>
+                        <th>Destino</th>
+                        <th>Tempo de Ocupação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>

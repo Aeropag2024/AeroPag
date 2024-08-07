@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações sobre Voos e Ofertas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="info.css">
+</head>
+<body>
+    <header>
+        <h1>Informações sobre Voos e Ofertas</h1>
+    </header>
+    <main>
+        <section class="flight-info-section">
+            <h2>Voos Disponíveis</h2>
+            <div id="flightCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#flightCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#flightCarousel" data-slide-to="1"></li>
+                    <li data-target="#flightCarousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-block w-100">
+                            <h3>Voo 123 - São Paulo para Rio de Janeiro</h3>
+                            <p><strong>Data:</strong> 2024-08-15</p>
+                            <p><strong>Hora de Partida:</strong> 10:00</p>
+                            <p><strong>Hora de Chegada:</strong> 11:30</p>
+                            <p><strong>Preço:</strong> R$ 450,00</p>
+                            <a href="https://www.exemplo.com/reserva123" class="btn btn-primary">Reservar Agora</a>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#flightCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#flightCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Próximo</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="offers-section">
+            <h2>Ofertas de Voos</h2>
+            <div id="offersCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#offersCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#offersCarousel" data-slide-to="1"></li>
+                    <li data-target="#offersCarousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-block w-100">
+                            <h3>Oferta Especial - São Paulo para Salvador</h3>
+                            <p><strong>Desconto:</strong> 30% de desconto em todas as passagens</p>
+                            <p><strong>Período:</strong> 2024-08-01 a 2024-08-15</p>
+                            <a href="https://www.exemplo.com/oferta123" class="btn btn-primary">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#offersCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#offersCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Próximo</span>
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

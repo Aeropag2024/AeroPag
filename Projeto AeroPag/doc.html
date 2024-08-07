@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentos Anexados</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .document-card {
+            margin-bottom: 20px;
+        }
+        .btnBack {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            background-color: gray;
+            border-radius: 5px;
+            border: none;
+        }
+        .btnBack:hover {
+            background-color: #6c757d;
+        }
+        .category-heading {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Documentos Anexados</h1>
+
+
+        <h2 class="category-heading">Pilotos</h2>
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="card document-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Nome do Documento 1</h5>
+                        <p class="card-text">Número do Documento: 12345</p>
+                        <p class="card-text">Data de Validade: 2025-12-31</p>
+                        <p class="card-text">Tipo: Piloto</p>
+                        <a href="documento1.pdf" class="btn btn-primary" target="_blank">Visualizar</a>
+                        <a href="documento1.pdf" class="btn btn-secondary" download>Baixar</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <h2 class="category-heading">Operadores</h2>
+        <div class="row">
+   
+            <div class="col-md-4">
+                <div class="card document-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Nome do Documento 2</h5>
+                        <p class="card-text">Número do Documento: 67890</p>
+                        <p class="card-text">Data de Validade: 2024-11-30</p>
+                        <p class="card-text">Tipo: Operador</p>
+                        <a href="documento2.pdf" class="btn btn-primary" target="_blank">Visualizar</a>
+                        <a href="documento2.pdf" class="btn btn-secondary" download>Baixar</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <a href="index.html" class="btnBack">Voltar</a>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

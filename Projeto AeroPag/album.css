@@ -1,0 +1,55 @@
+.navbar-custom {
+  background-color: #344b63; 
+}
+
+.menu-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  width: 20px;
+}
+
+.menu-button div {
+  background-color: white;
+  height: 3px;
+  border-radius: 1px;
+}
+
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px; 
+}
+
+.card {
+  margin: 10px;
+  width: 250px;
+  height: 300px; 
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #3b5b80; 
+}
+
+.card-body {
+  text-align: center;
+  padding-top: 15px;
+  background-color: #3b5b80; 
+  color: white;
+  height: calc(100% - 60px);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+
+.card:hover .card-body, .card:hover .card-footer {
+  color: black; 
+  background-color: white; 
+}
